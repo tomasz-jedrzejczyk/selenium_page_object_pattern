@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
-    final WebDriver driver;
+    WebDriver driver;
 
     //Constructor that will be automatically called as soon as the object of the class is created
     public LoginPage(WebDriver driver) {
@@ -16,14 +16,13 @@ public class LoginPage {
     @FindBy(id = "userName")
     WebElement userName;
 
+    //Locator for password field
     @FindBy(id = "password")
     WebElement password;
-    //Locator for password field
 
+    //Locator for login button
     @FindBy(id = "login")
     WebElement loginBtn;
-    //Locator for login button
-
 
     //Method to enter username
     public void enterUsername(String user) {

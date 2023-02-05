@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage {
-    final WebDriver driver;
+    WebDriver driver;
 
     //Constructor that will be automatically called as soon as the object of the class is created
     public HomePage(WebDriver driver) {

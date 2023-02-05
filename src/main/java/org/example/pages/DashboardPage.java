@@ -4,12 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Dashboard {
-
-    final WebDriver driver;
+public class DashboardPage {
+    WebDriver driver;
 
     //Constructor that will be automatically called as soon as the object of the class is created
-    public Dashboard(WebDriver driver) {
+    public DashboardPage(WebDriver driver) {
         this.driver=driver;
     }
 
@@ -34,8 +33,8 @@ public class Dashboard {
         logoutBtn.click();
     }
 
+    //Method to check if logged user is correct one
     public void verifyUser(String userName){
-
         if(loggedUser.getText().equalsIgnoreCase(userName))
             System.out.println("Correct username, ie " +loggedUser.getText());
 
