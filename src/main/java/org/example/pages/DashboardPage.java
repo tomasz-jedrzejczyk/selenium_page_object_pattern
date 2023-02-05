@@ -3,14 +3,16 @@ package org.example.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class Dashboard {
+public class DashboardPage {
 
     final WebDriver driver;
 
     //Constructor that will be automatically called as soon as the object of the class is created
-    public Dashboard(WebDriver driver) {
+    public DashboardPage(WebDriver driver) {
         this.driver=driver;
+        PageFactory.initElements(driver, this);
     }
 
     //Locators for the page title and the logout button

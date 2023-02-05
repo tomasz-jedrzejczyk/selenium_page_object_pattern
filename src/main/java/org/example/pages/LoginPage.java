@@ -3,6 +3,8 @@ package org.example.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 
 public class LoginPage {
     final WebDriver driver;
@@ -10,15 +12,16 @@ public class LoginPage {
     //Constructor that will be automatically called as soon as the object of the class is created
     public LoginPage(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
     //Locator for username field
     @FindBy(id = "userName")
     WebElement userName;
 
+    //Locator for password field
     @FindBy(id = "password")
     WebElement password;
-    //Locator for password field
 
     @FindBy(id = "login")
     WebElement loginBtn;
@@ -26,7 +29,7 @@ public class LoginPage {
 
 
     //Method to enter username
-    public void enterUsername(String user) {
+    public void enterUserName(String user) {
         userName.sendKeys(user);
     }
 
