@@ -10,6 +10,7 @@ public class Main {
     public static void main(String[] args){
 
         //Set property of ChromeDriver
+        // Optional. If not specified, WebDriver searches the PATH for chromedriver
         System.setProperty("Webdriver.Chrome.Driver", "C:\\Users\\Tomasz Jędrzejczyk\\Desktop\\repositories\\selenium_page_object_pattern\\chromedriver\\chromedriver.exe");
 
         //Instantiating chrome driver
