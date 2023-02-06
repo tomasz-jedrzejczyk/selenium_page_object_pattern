@@ -36,9 +36,9 @@ public class DashboardPage {
     //Method to check if logged user is correct one
     public void verifyUser(String userName){
         if(loggedUser.getText().equalsIgnoreCase(userName))
-            System.out.println("Correct username, ie " +loggedUser.getText());
+            System.out.println("Correct username: " + loggedUser.getText());
 
         else
-            System.out.println("Incorrect username..." +loggedUser.getText());
+            System.out.println("Incorrect username: " + loggedUser.getText());
     }
 }
